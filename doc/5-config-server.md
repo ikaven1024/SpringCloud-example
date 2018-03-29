@@ -7,13 +7,13 @@
 仓库下添加`user-config-dev.properties`
 
 ```properties
-user.name=Tom
+account.user.name=Tom
 ```
 
 添加`user-config-pro.properties`
 
 ```
-user.name=Jerry
+account.user.name=Jerry
 ```
 
 ## 配置中心
@@ -171,6 +171,4 @@ spring.rabbitmq.password=guest
 curl -X POST http://localhost:8791/bus/refresh
 ```
 
-重新访问 http://localhost:8771/users/name 。
-
-*TODO：访问并没有变化，但是日志里已经看到refresh动作。待解决*
+重新访问 http://localhost:8771/users/name ，返回修改值。
